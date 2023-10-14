@@ -2,7 +2,7 @@
 
 namespace Domain.Events;
 
-public record CommentCreateEvent: IEvent
+public sealed record CommentCreateEvent: IEvent
 {
     public Guid Id { get; set; } 
 }

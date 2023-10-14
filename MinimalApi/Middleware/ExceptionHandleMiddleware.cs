@@ -3,7 +3,7 @@ using System.Net.Mime;
 
 namespace MinimalApi.Middleware;
 
-public class ExceptionHandleMiddleware : IMiddleware
+public sealed class ExceptionHandleMiddleware : IMiddleware
 {
     private readonly ILogger<ExceptionHandleMiddleware> _logger;
     private readonly IHostEnvironment _hostEnvironment;

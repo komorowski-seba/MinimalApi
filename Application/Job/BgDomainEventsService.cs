@@ -9,7 +9,7 @@ using StackExchange.Redis;
 
 namespace Application.Job;
 
-public class BgDomainEventsService : BackgroundService
+public sealed class BgDomainEventsService : BackgroundService
 {
     public const string DomainEventChannelName = "domain-event-channel";
     

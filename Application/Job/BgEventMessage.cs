@@ -1,7 +1,7 @@
 ﻿namespace Application.Job;
 
 [Serializable]
-public class BgEventMessage
+public sealed class BgEventMessage
 {
     public string EventType { get; private set; }
     public string EventMessage { get; private set; }

@@ -9,7 +9,7 @@ using Microsoft.Extensions.Options;
 
 namespace Infrastructure.Persistence.Repositories;
 
-public class AuthorRepository : IAuthorRepository
+public sealed class AuthorRepository : IAuthorRepository
 {
     private readonly IApplicationDbContext _applicationDb;
     private readonly ConnectionStringsOptions _connectionStrings;

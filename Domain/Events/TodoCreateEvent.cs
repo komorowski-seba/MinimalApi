@@ -2,7 +2,7 @@
 
 namespace Domain.Events;
 
-public record TodoCreateEvent : IEvent
+public sealed record TodoCreateEvent : IEvent
 {
     public Guid Id { get; set; }
 }

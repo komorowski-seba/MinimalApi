@@ -1,12 +1,20 @@
 ﻿using Domain.Events;
 using MediatR;
+using Microsoft.Extensions.Logging;
 
 namespace Application.Events;
 
-public class AddNewCommentEventHandler : INotificationHandler<CommentCreateEvent>
+public sealed class AddNewCommentEventHandler : INotificationHandler<CommentCreateEvent>
 {
+    private readonly ILogger<AddNewCommentEventHandler> _logger;
+
+    public AddNewCommentEventHandler(ILogger<AddNewCommentEventHandler> logger)
+    {
+        _logger = logger;
+    }
+
     public async Task Handle(CommentCreateEvent notification, CancellationToken cancellationToken)
     {
-        Console.WriteLine($"AddNewCommentEvent ---- @@@@@ >>> hop: {notification.Id}");
+        _logger.LogInformation(nameof(CommentCreateEvent));
     }
 }

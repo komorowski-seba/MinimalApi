@@ -1,12 +1,20 @@
 ﻿using Domain.Events;
 using MediatR;
+using Microsoft.Extensions.Logging;
 
 namespace Application.Events;
 
-public class AddNewTodoEventHandler : INotificationHandler<TodoCreateEvent>
+public sealed class AddNewTodoEventHandler : INotificationHandler<TodoCreateEvent>
 {
+    private readonly ILogger<AddNewTodoEventHandler> _logger;
+
+    public AddNewTodoEventHandler(ILogger<AddNewTodoEventHandler> logger)
+    {
+        _logger = logger;
+    }
+
     public async Task Handle(TodoCreateEvent notification, CancellationToken cancellationToken)
     {
-        Console.WriteLine($"AddNewTodoEvent ---- @@@@@ >>> hop: {notification.Id}");
+        _logger.LogInformation(nameof(TodoCreateEvent));
     }
 }

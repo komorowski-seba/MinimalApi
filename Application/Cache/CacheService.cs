@@ -4,7 +4,7 @@ using Microsoft.Extensions.Caching.Distributed;
 
 namespace Application.Cache;
 
-public class CacheService : ICacheService
+public sealed class CacheService : ICacheService
 {
     private static readonly SemaphoreSlim semaphoreSlim = new(1, 1);
     private readonly IDistributedCache _cache;

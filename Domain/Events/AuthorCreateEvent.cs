@@ -2,8 +2,7 @@
 
 namespace Domain.Events;
 
-[Serializable]
-public class AuthorCreateEvent : IEvent
+public sealed class AuthorCreateEvent : IEvent
 {
     public Guid Id { get; set; } 
 }

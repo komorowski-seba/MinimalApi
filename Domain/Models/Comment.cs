@@ -8,8 +8,8 @@ namespace Domain.Models;
 public class Comment : Entitie
 {
     public Guid TodoId { get; init; }
-    public string Nickname { get; init; }
-    public string Text { get; init; }
+    public string Nickname { get; init; } = string.Empty;
+    public string Text { get; init; } = string.Empty;
 
     public virtual Todo? Todo { get; private set; }
     

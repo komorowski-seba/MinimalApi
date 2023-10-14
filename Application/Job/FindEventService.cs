@@ -4,7 +4,7 @@ using Domain.Common.Interfaces;
 
 namespace Application.Job;
 
-public class FindEventService : IFindEventService
+public sealed class FindEventService : IFindEventService
 {
     private readonly List<Type> _eventTypes = AppDomain
         .CurrentDomain
