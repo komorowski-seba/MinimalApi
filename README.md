@@ -1,3 +1,6 @@
+This project is a simple api which was used to show me how to limit exception 
+throwing in field validation and how using ***Redis queue*** to handle domain events in ***bg service***
+
 > ### FluentResults
 
 It seems that lot of error throwing exceptions in services
